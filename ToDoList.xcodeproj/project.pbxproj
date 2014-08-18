@@ -14,13 +14,14 @@
 		4CD94CDA19A1E6D500AE6969 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CD94CD919A1E6D500AE6969 /* main.m */; };
 		4CD94CDE19A1E6D500AE6969 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CD94CDD19A1E6D500AE6969 /* AppDelegate.m */; };
 		4CD94CE119A1E6D500AE6969 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CD94CDF19A1E6D500AE6969 /* Main.storyboard */; };
-		4CD94CE419A1E6D500AE6969 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CD94CE319A1E6D500AE6969 /* ViewController.m */; };
 		4CD94CE619A1E6D500AE6969 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4CD94CE519A1E6D500AE6969 /* Images.xcassets */; };
 		4CD94CED19A1E6D500AE6969 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CD94CEC19A1E6D500AE6969 /* XCTest.framework */; };
 		4CD94CEE19A1E6D500AE6969 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CD94CCD19A1E6D500AE6969 /* Foundation.framework */; };
 		4CD94CEF19A1E6D500AE6969 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CD94CD119A1E6D500AE6969 /* UIKit.framework */; };
 		4CD94CF719A1E6D500AE6969 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4CD94CF519A1E6D500AE6969 /* InfoPlist.strings */; };
 		4CD94CF919A1E6D500AE6969 /* ToDoListTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CD94CF819A1E6D500AE6969 /* ToDoListTests.m */; };
+		4CD94D0519A1F0FD00AE6969 /* MainTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CD94D0419A1F0FD00AE6969 /* MainTableViewController.m */; };
+		4CD94D0819A1F11500AE6969 /* EditTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CD94D0719A1F11500AE6969 /* EditTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,14 +46,16 @@
 		4CD94CDC19A1E6D500AE6969 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		4CD94CDD19A1E6D500AE6969 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		4CD94CE019A1E6D500AE6969 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		4CD94CE219A1E6D500AE6969 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		4CD94CE319A1E6D500AE6969 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		4CD94CE519A1E6D500AE6969 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		4CD94CEB19A1E6D500AE6969 /* ToDoListTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ToDoListTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CD94CEC19A1E6D500AE6969 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		4CD94CF419A1E6D500AE6969 /* ToDoListTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ToDoListTests-Info.plist"; sourceTree = "<group>"; };
 		4CD94CF619A1E6D500AE6969 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		4CD94CF819A1E6D500AE6969 /* ToDoListTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ToDoListTests.m; sourceTree = "<group>"; };
+		4CD94D0319A1F0FD00AE6969 /* MainTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTableViewController.h; sourceTree = "<group>"; };
+		4CD94D0419A1F0FD00AE6969 /* MainTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTableViewController.m; sourceTree = "<group>"; };
+		4CD94D0619A1F11500AE6969 /* EditTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditTableViewController.h; sourceTree = "<group>"; };
+		4CD94D0719A1F11500AE6969 /* EditTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,8 +118,10 @@
 				4CD94CDC19A1E6D500AE6969 /* AppDelegate.h */,
 				4CD94CDD19A1E6D500AE6969 /* AppDelegate.m */,
 				4CD94CDF19A1E6D500AE6969 /* Main.storyboard */,
-				4CD94CE219A1E6D500AE6969 /* ViewController.h */,
-				4CD94CE319A1E6D500AE6969 /* ViewController.m */,
+				4CD94D0319A1F0FD00AE6969 /* MainTableViewController.h */,
+				4CD94D0419A1F0FD00AE6969 /* MainTableViewController.m */,
+				4CD94D0619A1F11500AE6969 /* EditTableViewController.h */,
+				4CD94D0719A1F11500AE6969 /* EditTableViewController.m */,
 				4CD94CE519A1E6D500AE6969 /* Images.xcassets */,
 				4CD94CD419A1E6D500AE6969 /* Supporting Files */,
 			);
@@ -162,6 +167,7 @@
 				4CD94CC619A1E6D500AE6969 /* Sources */,
 				4CD94CC719A1E6D500AE6969 /* Frameworks */,
 				4CD94CC819A1E6D500AE6969 /* Resources */,
+				4CD94D0219A1EE3100AE6969 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -244,14 +250,31 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		4CD94D0219A1EE3100AE6969 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "~/autoVersion.sh";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		4CD94CC619A1E6D500AE6969 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4CD94CE419A1E6D500AE6969 /* ViewController.m in Sources */,
 				4CD94CDE19A1E6D500AE6969 /* AppDelegate.m in Sources */,
+				4CD94D0819A1F11500AE6969 /* EditTableViewController.m in Sources */,
 				4CD94CDA19A1E6D500AE6969 /* main.m in Sources */,
+				4CD94D0519A1F0FD00AE6969 /* MainTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
