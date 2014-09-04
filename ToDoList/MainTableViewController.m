@@ -29,7 +29,10 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     self.navigationItem.leftBarButtonItem = self.editButtonItem;
+    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
+    self.navigationItem.rightBarButtonItem = addButton;
 }
+
 
 
 #pragma mark - Table view data source
@@ -59,7 +62,7 @@
     cell.detailTextLabel.text = [date description];
     return cell;
 }
-//やっほー
+
 
 
 /*
