@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C72EB1119B99E1C00E16F24 /* EditTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C72EB1019B99E1C00E16F24 /* EditTableViewCell.m */; };
 		4CD94CCE19A1E6D500AE6969 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CD94CCD19A1E6D500AE6969 /* Foundation.framework */; };
 		4CD94CD019A1E6D500AE6969 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CD94CCF19A1E6D500AE6969 /* CoreGraphics.framework */; };
 		4CD94CD219A1E6D500AE6969 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CD94CD119A1E6D500AE6969 /* UIKit.framework */; };
@@ -35,6 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4C72EB0F19B99E1C00E16F24 /* EditTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditTableViewCell.h; sourceTree = "<group>"; };
+		4C72EB1019B99E1C00E16F24 /* EditTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditTableViewCell.m; sourceTree = "<group>"; };
 		4CD94CCA19A1E6D500AE6969 /* ToDoList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDoList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CD94CCD19A1E6D500AE6969 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		4CD94CCF19A1E6D500AE6969 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -122,6 +125,8 @@
 				4CD94D0419A1F0FD00AE6969 /* MainTableViewController.m */,
 				4CD94D0619A1F11500AE6969 /* EditTableViewController.h */,
 				4CD94D0719A1F11500AE6969 /* EditTableViewController.m */,
+				4C72EB0F19B99E1C00E16F24 /* EditTableViewCell.h */,
+				4C72EB1019B99E1C00E16F24 /* EditTableViewCell.m */,
 				4CD94CE519A1E6D500AE6969 /* Images.xcassets */,
 				4CD94CD419A1E6D500AE6969 /* Supporting Files */,
 			);
@@ -271,6 +276,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C72EB1119B99E1C00E16F24 /* EditTableViewCell.m in Sources */,
 				4CD94CDE19A1E6D500AE6969 /* AppDelegate.m in Sources */,
 				4CD94D0819A1F11500AE6969 /* EditTableViewController.m in Sources */,
 				4CD94CDA19A1E6D500AE6969 /* main.m in Sources */,
@@ -479,6 +485,7 @@
 				4CD94CFE19A1E6D500AE6969 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4CD94CFF19A1E6D500AE6969 /* Build configuration list for PBXNativeTarget "ToDoListTests" */ = {
 			isa = XCConfigurationList;
@@ -487,6 +494,7 @@
 				4CD94D0119A1E6D500AE6969 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
