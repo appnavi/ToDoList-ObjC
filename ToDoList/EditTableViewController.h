@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface EditTableViewController : UITableViewController
-
+@property NSArray *detail;
+@property NSInteger nmb;
 @end

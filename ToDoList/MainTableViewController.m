@@ -7,7 +7,8 @@
 //
 
 #import "MainTableViewController.h"
-
+#import "EditTableViewController.h"
+#import "EditTableViewCell.h"
 #import "AppDelegate.h"
 
 @interface MainTableViewController ()
@@ -28,6 +29,7 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     self.navigationItem.leftBarButtonItem = self.editButtonItem;
+    app.ToDoList = [NSMutableArray array];
 }
 
 
@@ -112,6 +114,37 @@
 {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    EditTableViewController *tmp = [segue destinationViewController];
+    if ([segue.identifier isEqualToString:@"Edit"]) {
+        tmp.detail = app.ToDoList[[self.tableView indexPathForSelectedRow].row];
+        tmp.nmb = [self.tableView indexPathForSelectedRow].row;
+    } else if ([segue.identifier isEqualToString:@"Add"]) {
+        tmp.detail = @[@"", [NSDate date]];
+        tmp.nmb = -1;
+    }
+    
+}
+
+// 戻る用
+- (IBAction)unwindToMain:(UIStoryboardSegue *)segue
+{
+    EditTableViewController *tmp = [segue sourceViewController];
+    EditTableViewCell *titleCell = (EditTableViewCell *)[tmp.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]];
+    EditTableViewCell *dateCell = (EditTableViewCell *)[tmp.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:1 inSection:0]];
+    
+    NSString *titleString = titleCell.myTextField.text;
+    
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"yyyy/MM/dd HH:mm:ss"];
+    NSDate *date = [formatter dateFromString:dateCell.myTextField.text];
+    
+    
+    if (tmp.nmb == -1) {
+        [app.ToDoList insertObject:@[titleString, date] atIndex:0];
+    } else {
+        app.ToDoList[tmp.nmb] = @[titleString , date];
+    }
+    [self.tableView reloadData];
 }
 
 

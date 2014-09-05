@@ -57,11 +57,14 @@
     // Configure the cell...
     if (indexPath.row == 0) {
         cell.myTextField.placeholder = @"予定を書き込んでください。";
+        cell.myTextField.text = self.detail[0];
     } else{
         cell.myTextField.placeholder = @"日程を書き込んでください。";
+        NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+        [formatter setDateFormat:@"yyyy/MM/dd HH:mm:ss"];
+        cell.myTextField.text = [formatter stringFromDate:self.detail[1]];
     }
-    
-    
+
     
     
     return cell;

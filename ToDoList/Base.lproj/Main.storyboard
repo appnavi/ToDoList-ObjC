@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6206.8" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="hsV-eY-Hog">
     <dependencies>
+        <deployment defaultVersion="1808" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7026.1"/>
     </dependencies>
     <scenes>
@@ -13,7 +14,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="7uV-9W-456" detailTextLabel="L8n-9s-aMD" style="IBUITableViewCellStyleSubtitle" id="dDa-bU-4vX">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ToDoCell" textLabel="7uV-9W-456" detailTextLabel="L8n-9s-aMD" style="IBUITableViewCellStyleSubtitle" id="dDa-bU-4vX">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dDa-bU-4vX" id="bAt-0M-UyJ">
                                     <autoresizingMask key="autoresizingMask"/>
@@ -32,6 +33,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="qkT-Kz-T60" kind="push" identifier="Edit" id="hhq-Nv-8Bs"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <sections/>
@@ -43,7 +47,7 @@
                     <navigationItem key="navigationItem" id="tOP-01-QdC">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="T4P-SV-nCW">
                             <connections>
-                                <segue destination="qkT-Kz-T60" kind="push" id="HLC-6X-8Fw"/>
+                                <segue destination="qkT-Kz-T60" kind="push" identifier="Add" id="HLC-6X-8Fw"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -83,9 +87,16 @@
                             <outlet property="delegate" destination="qkT-Kz-T60" id="fhg-XW-Naz"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="vHS-M0-hD1"/>
+                    <navigationItem key="navigationItem" id="vHS-M0-hD1">
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="xOy-6h-gRk">
+                            <connections>
+                                <segue destination="RMf-Gy-ATJ" kind="unwind" unwindAction="unwindToMain:" id="Dxr-uY-r2c"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d31-cR-azi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="RMf-Gy-ATJ" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1192" y="176"/>
         </scene>
@@ -116,4 +127,7 @@
             <size key="landscapeSize" width="568" height="320"/>
         </simulatedScreenMetrics>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="HLC-6X-8Fw"/>
+    </inferredMetricsTieBreakers>
 </document>
